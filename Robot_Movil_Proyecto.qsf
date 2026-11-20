@@ -70,4 +70,59 @@ set_global_assignment -name BDF_FILE src/robot_system.bdf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_B8 -to btn_reset
+set_location_assignment PIN_C10 -to sw_habi
+set_location_assignment PIN_A8 -to ledr[0]
+set_location_assignment PIN_A9 -to ledr[1]
+set_location_assignment PIN_A10 -to ledr[2]
+set_location_assignment PIN_B10 -to ledr[3]
+set_location_assignment PIN_D13 -to ledr[4]
+set_location_assignment PIN_C13 -to ledr[5]
+set_location_assignment PIN_E14 -to ledr[6]
+set_location_assignment PIN_D14 -to ledr[7]
+set_location_assignment PIN_A11 -to ledr[8]
+set_location_assignment PIN_B11 -to ledr[9]
+set_location_assignment PIN_P11 -to reloj_50MHz
+set_location_assignment PIN_V7 -to trig_right
+set_location_assignment PIN_W8 -to trig_left
+set_location_assignment PIN_V8 -to trig_front
+set_location_assignment PIN_W7 -to trig_back
+set_location_assignment PIN_AB11 -to stby
+set_location_assignment PIN_Y11 -to pwm_rightB
+set_location_assignment PIN_AB12 -to pwm_leftA
+set_location_assignment PIN_V10 -to ldr_in[0]
+set_location_assignment PIN_W10 -to ldr_in[1]
+set_location_assignment PIN_V9 -to ldr_in[2]
+set_location_assignment PIN_W9 -to ldr_in[3]
+set_location_assignment PIN_C18 -to hex1[0]
+set_location_assignment PIN_D18 -to hex1[1]
+set_location_assignment PIN_E18 -to hex1[2]
+set_location_assignment PIN_B16 -to hex1[3]
+set_location_assignment PIN_A17 -to hex1[4]
+set_location_assignment PIN_A18 -to hex1[5]
+set_location_assignment PIN_B17 -to hex1[6]
+set_location_assignment PIN_C14 -to hex0[0]
+set_location_assignment PIN_E15 -to hex0[1]
+set_location_assignment PIN_C15 -to hex0[2]
+set_location_assignment PIN_C16 -to hex0[3]
+set_location_assignment PIN_E16 -to hex0[4]
+set_location_assignment PIN_D17 -to hex0[5]
+set_location_assignment PIN_C17 -to hex0[6]
+set_location_assignment PIN_W5 -to echo_right
+set_location_assignment PIN_V5 -to echo_left
+set_location_assignment PIN_W6 -to echo_front
+set_location_assignment PIN_AA15 -to echo_back
+set_location_assignment PIN_AB13 -to bin2
+set_location_assignment PIN_W12 -to bin1
+set_location_assignment PIN_W13 -to ain2
+set_location_assignment PIN_AA14 -to ain1
+set_global_assignment -name ENABLE_OCT_DONE OFF
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_instance_assignment -name IO_STANDARD "3.3 V SCHMITT TRIGGER" -to btn_reset
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
